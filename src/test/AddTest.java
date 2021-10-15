@@ -37,6 +37,23 @@ public class AddTest {
         assertEquals(3, add("//;\n1;2"));
     }
 
+    @Test
+    public void throw_error_for_negatives(){
+        try {
+            add("-1,2");
+        }
+        catch (IllegalArgumentException e){
+            assertEquals(e.getMessage(), "Negatives are not allowed:  -1");
+        }
+
+        try {
+            add("2,-4,3,-5");
+        }
+        catch (IllegalArgumentException e){
+            assertEquals(e.getMessage(), "Negatives are not allowed:  -4 -5");
+        }
+    }
+
 
 
 }

@@ -28,9 +28,19 @@ public class Add {
     }
 
     public static int sum(String[] numbers){
+
+        String negativeList = "";
+
         int total = 0;
         for(String number : numbers){
-            total += convert(number);
+            if(convert(number) < 0){
+                negativeList += (" " + number);
+            }
+
+                total += convert(number);
+        }
+        if(!negativeList.equals("")){
+            throw new IllegalArgumentException("Negatives are not allowed: " + negativeList);
         }
         return total;
     }
