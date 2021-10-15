@@ -13,5 +13,9 @@ public class AddTest {
        Assertions.assertEquals(add(""), 0);
    }
 
+    @Test
+    public void return_number_for_one_input() {
+        assertEquals(add("1"), 1);
+    }
 
 }
