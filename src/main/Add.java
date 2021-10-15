@@ -5,12 +5,22 @@ public class Add {
         if(input.equals("")){
             return 0;
         }
-        else
-            return convert(input);
+
+        else {
+            String numList[] = input.split(",");
+            return sum(numList);
+        }
     }
 
     public static int convert(String input){
         return Integer.parseInt(input);
     }
 
+    public static int sum(String[] numbers){
+        int total = 0;
+        for(String number : numbers){
+            total += convert(number);
+        }
+        return total;
+    }
 }

@@ -17,5 +17,12 @@ public class AddTest {
     public void return_number_for_one_input() {
         assertEquals(add("1"), 1);
     }
+    @Test
+    public void testTwoNumbers() {
+        assertEquals(add("1,2"), 3);
+    }
+
+
+
 
 }
