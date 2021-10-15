@@ -18,8 +18,13 @@ public class AddTest {
         assertEquals(add("1"), 1);
     }
     @Test
-    public void testTwoNumbers() {
+    public void return_sum_for_two_inputs() {
         assertEquals(add("1,2"), 3);
+    }
+
+    @Test
+    public void return_sum_for_any_number_of_inputs() {
+        assertEquals(add("1,2,3"), 6);
     }
 
 
