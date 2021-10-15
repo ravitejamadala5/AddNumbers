@@ -7,7 +7,9 @@ public class Add {
         }
 
         else {
-            String numList[] = input.split(",");
+
+            String[] numList;
+            numList = input.split(",|\n");
             return sum(numList);
         }
     }

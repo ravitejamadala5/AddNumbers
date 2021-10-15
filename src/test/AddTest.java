@@ -27,6 +27,10 @@ public class AddTest {
         assertEquals(add("1,2,3"), 6);
     }
 
+    @Test
+    public void return_sum_for_commas_and_new_lines() {
+        assertEquals(6, add("1\n2,3"));
+    }
 
 
 
