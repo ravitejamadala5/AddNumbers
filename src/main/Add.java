@@ -8,10 +8,19 @@ public class Add {
 
         else {
 
-            String[] numList;
-            numList = input.split(",|\n");
+            String delimiter = ","; //default
+            if(input.matches("//(.*)\n(.*)")){
+                delimiter = Character.toString(input.charAt(2));
+                input = input.substring(4);
+            }
+
+            String numList[] = delimiterSplit(input, delimiter + "|\n");
             return sum(numList);
         }
+    }
+
+    public static String[] delimiterSplit(String numbers, String delimiter){
+        return numbers.split(delimiter);
     }
 
     public static int convert(String input){

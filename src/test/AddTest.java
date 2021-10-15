@@ -30,6 +30,11 @@ public class AddTest {
     @Test
     public void return_sum_for_commas_and_new_lines() {
         assertEquals(6, add("1\n2,3"));
+   }
+
+    @Test
+    public void return_sum_for_delimiters() {
+        assertEquals(3, add("//;\n1;2"));
     }
 
 
